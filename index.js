@@ -1,6 +1,6 @@
 /**
  * Assemble + Handlebars Helpers: {{eachPartial}}, {{mdpartial}}
- * 
+ *
  * Copyright (c) 2014 Alex Bogdanovski
  * Licensed under the MIT License
  */
@@ -84,7 +84,7 @@ module.exports.register = function(Handlebars, opts, params) {
 		var filepath = _.first(_.filter(assemble.partials, function(fp) {
 			return path.basename(fp, path.extname(fp)) === name;
 		}));
-    
+
 		// not found - find by path
 		if (!filepath || filepath.length <= 0) {
 			filepath = name;
@@ -102,9 +102,9 @@ module.exports.register = function(Handlebars, opts, params) {
 		context = grunt.config.process(context);
 
 		var compiledTemplate = Handlebars.compile(pageObj.content || "");
-		var output = compiledTemplate(context).replace(/^\s+/, "");    
-    var content = (path.extname(filepath) === ".md") ? marked(output) : output;
-    
+		var output = compiledTemplate(context).replace(/^\s+/, "");
+    	var content = (path.extname(filepath) === ".md") ? marked(output) : output;
+
 		context = _.extend(context, {
 			content: new Handlebars.SafeString(content),
 			partialSrc: filepath,

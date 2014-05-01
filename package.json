@@ -21,16 +21,18 @@
     }
   ],
   "main": "./index.js",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "gray-matter": "^0.3.4",
+    "marked": "^0.3.2",
+    "minimatch": "^0.2.14"
+  },
   "devDependencies": {
     "assemble": ">=0.4.37",
     "grunt": ">=0.4.4",
     "grunt-contrib-clean": ">=0.5.0",
     "grunt-contrib-copy": ">=0.5.0",
-    "grunt-contrib-jshint": ">=0.8.0",
-    "lodash": "^2.4.1",
-    "gray-matter": "^0.3.4",
-    "marked": "^0.3.2",
-    "minimatch": "^0.2.14"
+    "grunt-contrib-jshint": ">=0.8.0"
   },
   "keywords": [
     "assemble",
